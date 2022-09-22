@@ -1,0 +1,78 @@
+﻿@model Application.Entities.IPD_Patient
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>IPD_Patient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Patient_Id" class="control-label"></label>
+                <input asp-for="Patient_Id" class="form-control" />
+                <span asp-validation-for="Patient_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Charges_Id" class="control-label"></label>
+                <input asp-for="Charges_Id" class="form-control" />
+                <span asp-validation-for="Charges_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nurse" class="control-label"></label>
+                <input asp-for="Nurse" class="form-control" />
+                <span asp-validation-for="Nurse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admit_Date" class="control-label"></label>
+                <input asp-for="Admit_Date" class="form-control" />
+                <span asp-validation-for="Admit_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discharge_Date" class="control-label"></label>
+                <input asp-for="Discharge_Date" class="form-control" />
+                <span asp-validation-for="Discharge_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room" class="control-label"></label>
+                <input asp-for="Room" class="form-control" />
+                <span asp-validation-for="Room" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medical_Store_Access" class="control-label"></label>
+                <input asp-for="Medical_Store_Access" class="form-control" />
+                <span asp-validation-for="Medical_Store_Access" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Canteen_Access" class="control-label"></label>
+                <input asp-for="Canteen_Access" class="form-control" />
+                <span asp-validation-for="Canteen_Access" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="No_of_Days" class="control-label"></label>
+                <input asp-for="No_of_Days" class="form-control" />
+                <span asp-validation-for="No_of_Days" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="No_of_Visits" class="control-label"></label>
+                <input asp-for="No_of_Visits" class="form-control" />
+                <span asp-validation-for="No_of_Visits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

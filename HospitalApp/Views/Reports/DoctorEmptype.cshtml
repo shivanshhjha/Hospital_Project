@@ -1,0 +1,23 @@
+﻿@using Application.Entities
+@model Application.Entities.Doctor
+
+@{
+    ViewData["Title"] = "DoctorEmptype";
+    var doc = (List<SelectListItem>)ViewBag.Doc;
+}
+
+<h1>DoctorEmptype</h1>
+
+
+<form asp-action="ListDoctorEmptype">
+    <div class="form-group">
+        @*<label asp-for="" class="control-label"></label>*@
+        Select Doctor Emp Type
+        <select asp-for="Emp_Type" class="form-control"
+                asp-items="@doc"></select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>

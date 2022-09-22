@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Application.Entities.IPD_Patient>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Charges_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nurse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admit_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discharge_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medical_Store_Access)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Canteen_Access)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.No_of_Days)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.No_of_Visits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Charges_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nurse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Admit_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discharge_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medical_Store_Access)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Canteen_Access)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.No_of_Days)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.No_of_Visits)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total_Amount)
+                </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Patient_Id  }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Patient_Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

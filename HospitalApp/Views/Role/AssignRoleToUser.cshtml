@@ -1,0 +1,55 @@
+﻿@model UserInRole
+
+
+@{
+    ViewData["Title"] = "Create";
+
+    var users = (List<SelectListItem>)ViewBag.Users;
+    var roles = (List<SelectListItem>)ViewBag.Roles;
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AssignRoleToUser">
+
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="UserId" class="control-label"></label>
+                            Select Role
+                            <select asp-for="RoleId" class="form-control"
+                                    asp-items="@roles"></select>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="UserId" class="control-label"></label>
+                            Select User
+                            <select asp-for="UserId" class="form-control"
+                                    asp-items="@users"></select>
+
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+          
+
+          
+             
+ 
+
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+   </div>
+ 
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

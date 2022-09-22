@@ -1,0 +1,22 @@
+﻿@using Application.Entities
+@model Application.Entities.Doctor
+
+@{
+    ViewData["Title"] = "Doctorspecialization";
+    var doc = (List<SelectListItem>)ViewBag.Doc;
+}
+
+<h1>Doctorspecialization</h1>
+
+<form asp-action="ListDoctorspecialization">
+<div class="form-group">
+    <label asp-for="Specialization" class="control-label">assdfsdfsdd</label>
+    Select Role
+    <select asp-for="Specialization" class="form-control"
+            asp-items="@doc"></select>
+</div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>

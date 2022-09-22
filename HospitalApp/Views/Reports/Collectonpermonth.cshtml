@@ -1,0 +1,21 @@
+﻿@model HospitalApp.Controllers.monthh
+
+@{
+    ViewData["Title"] = "collection per month";
+    var arr = (List<SelectListItem>)ViewBag.arr;
+}
+
+<h1>Collection per month</h1>
+
+
+<form asp-action="CCollectonpermonth">
+    <div class="form-group">
+        Select Month
+        <select asp-for="id" class="form-control"
+                asp-items="@arr"></select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>
